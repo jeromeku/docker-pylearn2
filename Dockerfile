@@ -16,3 +16,17 @@ RUN cd /opt && git clone git://github.com/Theano/Theano.git
 
 RUN cd /opt/Theano && python setup.py develop
 
+RUN cd /opt && git clone git://github.com/lisa-lab/pylearn2.git
+
+RUN cd /opt/pylearn2 && python setup.py develop
+
+RUN export PYLEARN2_DATA_PATH=/opt/data
+
+# Launch pylearn2 when launching the container
+# ENTRYPOINT ["pylearn2"]
+
+# run pylearn2 as the daemon user
+#USER daemon
+
+# expose pylearn2 port
+# EXPOSE 11211
