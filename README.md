@@ -1,7 +1,7 @@
 Pylearn2 in a container
 ===============
 
-Run Deep Neural Network (DNN) in a `container`. Using `Docker`, you can run a DNN application on `any OS` (e.g., Ubuntu, Mac OS X, Windows) and popular Clouds (e.g., Amazon EC2, Rackspace Cloud, Google Cloud)
+Run Deep Neural Networks (DNN) in a `container`. Using `Docker`, you can run a DNN application on `any OS` (e.g., Ubuntu, Mac OS X, Windows) and popular Clouds (e.g., Amazon EC2, Rackspace Cloud, Google Cloud). 
 
 Setup
 -----
@@ -23,6 +23,7 @@ $ cd docker-pylearn2
 $ sudo docker build -t test/pylearn2 - < Dockerfile
 
 ## run a Pylearn2 example with the above container 'test/pylearn2'
+## In detail, it will download a Pylearn2 application to `/tmp` from `https://github.com/lucktroy/regression-deep-learning`. The output is in `/tmp/regression-deep-learning`.
 $ sh runTest.sh test/pylearn2
 ```
 

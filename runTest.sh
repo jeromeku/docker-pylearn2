@@ -2,8 +2,9 @@
 
 NAME=$1
 
+# Download a Pylearn2 example from https://github.com/lucktroy/regression-deep-learning
 cd /tmp && rm -rf regression-deep-learning && git clone https://github.com/lucktroy/regression-deep-learning.git
 cd -
-#sudo docker run -v /tmp/regression-deep-learning:/opt/Test/regression-deep-learning lucktroy/pylearn2 sh /opt/Test/regression-deep-learning/example-pylearn2/runMe.sh
 
+# Run the Pylearn2 example, it will be terminated after 5 epoches.
 sudo docker run -v /tmp/regression-deep-learning:/media $NAME sh -c 'cd /media/example-pylearn2 && sh runTest.sh'
