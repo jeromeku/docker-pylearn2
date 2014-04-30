@@ -54,3 +54,4 @@ sudo docker run -v /tmp/regression-deep-learning:/media $NAME sh -c 'cd /media/e
 
 ### Undo
 1. GPU is not support. 
+2. The above scipts are avaliable on `Ubuntu`. For other OS, you do need start with `sudo`. 
