@@ -28,5 +28,29 @@ $ sudo docker build -t test/pylearn2 - < Dockerfile
 $ sh runTest.sh test/pylearn2
 ```
 
+### See `runTest.sh`
+```
+$ cat runTest.sh
+```
+```sh
+#!/bin/sh
+
+if [ $# != 1 ]; then
+    echo "USAGE: sh $0 CONTAINER_NAME"
+    echo "e.g.: sh $0 test/pylearn2"
+    exit 1;g
+else
+    NAME=$1
+fi
+
+# Download a Pylearn2 example from https://github.com/lucktroy/regression-deep-learning
+cd /tmp && rm -rf regression-deep-learning && git clone https://github.com/lucktroy/regression-deep-learning.git
+cd -
+
+# Run the Pylearn2 example, it will be terminated after 5 epoches.
+sudo docker run -v /tmp/regression-deep-learning:/media $NAME sh -c 'cd /media/example-pylearn2 && sh runTest.sh'
+
+```
+
 ### Undo
 1. GPU is not support. 
