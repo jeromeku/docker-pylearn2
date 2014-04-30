@@ -10,6 +10,8 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 
 # install Theano's dependencies
+RUN apt-get install -y g++
+
 RUN apt-get install -y python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git
 
 RUN cd /opt && git clone git://github.com/Theano/Theano.git
