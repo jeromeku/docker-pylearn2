@@ -20,13 +20,6 @@ RUN cd /opt && git clone git://github.com/lisa-lab/pylearn2.git
 
 RUN cd /opt/pylearn2 && python setup.py develop
 
-RUN export PYLEARN2_DATA_PATH=/opt/data
+RUN bash -c 'echo "export PYLEARN2_DATA_PATH=/opt/data" >> /.bashrc'
 
-# Launch pylearn2 when launching the container
-# ENTRYPOINT ["pylearn2"]
-
-# run pylearn2 as the daemon user
-#USER daemon
-
-# expose pylearn2 port
-# EXPOSE 11211
+RUN bash -c 'echo "export PATH=/opt/pylearn2/pylearn2/scripts:$PATH" >> /.bashrc'
