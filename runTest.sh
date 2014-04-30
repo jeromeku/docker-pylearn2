@@ -1,6 +1,12 @@
 #!/bin/sh
 
-NAME=$1
+if [ $# != 1 ]; then
+    echo "USAGE: sh $0 CONTAINER_NAME"
+    echo "e.g.: sh $0 test/pylearn2"
+    exit 1;
+else
+    NAME=$1
+fi
 
 # Download a Pylearn2 example from https://github.com/lucktroy/regression-deep-learning
 cd /tmp && rm -rf regression-deep-learning && git clone https://github.com/lucktroy/regression-deep-learning.git
