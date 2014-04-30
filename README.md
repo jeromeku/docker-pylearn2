@@ -6,12 +6,9 @@ Run Deep Neural Network (DNN) in a `container`. Using `Docker`, you can run a DN
 Setup
 -----
 
-### Dependencies
+### Install Docker
 * [Docker](https://www.docker.io/) and its dependencies are required. 
 
-### Download
-
-git clone https://github.com/lucktroy/docker-pylearn2.git
 
 ### Start
 
