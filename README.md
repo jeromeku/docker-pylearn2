@@ -23,7 +23,8 @@ $ cd docker-pylearn2
 $ sudo docker build -t test/pylearn2 - < Dockerfile
 
 ## run a Pylearn2 example with the above container 'test/pylearn2'
-## In detail, it will download a Pylearn2 application to `/tmp` from `https://github.com/lucktroy/regression-deep-learning`. The output is in `/tmp/regression-deep-learning`.
+## In detail, it will download a Pylearn2 application to `/tmp` from `https://github.com/lucktroy/regression-deep-learning`. 
+## The output is in `/tmp/regression-deep-learning`.
 $ sh runTest.sh test/pylearn2
 ```
 
