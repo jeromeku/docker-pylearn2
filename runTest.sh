@@ -3,7 +3,7 @@
 if [ $# != 1 ]; then
     echo "USAGE: sh $0 CONTAINER_NAME"
     echo "e.g.: sh $0 test/pylearn2"
-    exit 1;
+    exit 1;g
 else
     NAME=$1
 fi
